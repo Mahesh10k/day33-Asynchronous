@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+            height: 97vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        div{
+            height: 300px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="countdown"></div>
+
+
+    <script>
+        let countDown=document.getElementById("countdown");
+        countDown.style.fontSize="200px"
+        let timer=10;
+        countDown.textContent=10
+        let count=setInterval(()=>{
+            timer--;
+            countDown.textContent=timer;
+        },1000)
+
+        setTimeout(()=>{
+            clearInterval(count);
+            countDown.textContent="Time's up!"
+        },10500)
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 300px;
+            width: 300px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div id="colorBox"></div> <br>
+    <button id="btn1">Click Me</button>
+
+    <script>
+        let box=document.getElementById("colorBox");
+        let myBtn1=document.getElementById("btn1")
+        setTimeout(()=>{
+            box.style.backgroundColor="blue";
+        },5000)
+        myBtn1.addEventListener("click",()=>{
+            setTimeout(() => {
+                box.style.backgroundColor="green";
+            },5000);
+        })
+
+    </script>
+</body>
+</html>
